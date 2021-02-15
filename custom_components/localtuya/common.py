@@ -313,6 +313,10 @@ class LocalTuyaEntity(RestoreEntity, pytuya.ContextualLogger):
             )
         return self.dps(dp_index)
 
+    def dps_all(self):
+        """Return the dictionary of all the available DPS"""
+        return {int(k):v for k,v in self._status.items()}
+
     def status_updated(self):
         """Device status was updated.
 

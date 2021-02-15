@@ -74,7 +74,18 @@
                     "fan_oscillating_control": "Fan Oscillating Control",
                     "fan_speed_low": "Fan Low Speed Setting",
                     "fan_speed_medium": "Fan Medium Speed Setting",
-                    "fan_speed_high": "Fan High Speed Setting"
+                    "fan_speed_high": "Fan High Speed Setting",
+                    "current_temperature_dp": "Current Temperature",
+                    "target_temperature_dp": "Target Temperature",
+                    "fan_mode_dp": "Fan Mode (optional)",
+                    "temperature_step": "Temperature Step (optional)",
+                    "max_temperature_dp": "Max Temperature (optional)",
+                    "min_temperature_dp": "Min Temperature (optional)",
+                    "precision": "Precision (optional, for DPs values)",
+                    "temperature_unit": "Temperature Unit (optional)",
+                    "hvac_modes_json": "HVAC Modes (JSON)",
+                    "preset_modes_json": "Presets (JSON)",
+                    "euristic_action": "Enable euristic action (optional)"
                 }
             }
         }
@@ -126,7 +137,18 @@
                     "fan_oscillating_control": "Fan Oscillating Control",
                     "fan_speed_low": "Fan Low Speed Setting",
                     "fan_speed_medium": "Fan Medium Speed Setting",
-                    "fan_speed_high": "Fan High Speed Setting"
+                    "fan_speed_high": "Fan High Speed Setting",
+                    "current_temperature_dp": "Current Temperature",
+                    "target_temperature_dp": "Target Temperature",
+                    "fan_mode_dp": "Fan Mode (optional)",
+                    "temperature_step": "Temperature Step (optional)",
+                    "max_temperature_dp": "Max Temperature (optional)",
+                    "min_temperature_dp": "Min Temperature (optional)",
+                    "precision": "Precision (optional, for DPs values)",
+                    "temperature_unit": "Temperature Unit (optional)",
+                    "hvac_modes_json": "HVAC Modes (JSON)",
+                    "preset_modes_json": "Presets (JSON)",
+                    "euristic_action": "Enable euristic action (optional)"
                 }
             },
             "yaml_import": {
