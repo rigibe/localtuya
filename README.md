@@ -1,3 +1,68 @@
+# Fork info:
+
+Forked from
+https://github.com/rospogrigio/localtuya
+.
+
+To configure the available HVAC modes and presets a JSON formatted string is used.
+
+The format is:
+```
+{HA_HVAC_MODE: {DP Index: DP Value}}
+```
+
+The available HVAC modes are:
+https://developers.home-assistant.io/docs/core/entity/climate/#hvac-modes
+
+I have tested it with OFF, HEAT and AUTO only.
+
+DP Index and DP Value are respectively the DP index number and its value so that trigger the corresponding (parent) HVAC mode.
+
+An example is:
+
+```
+{HVAC_MODE_OFF: {
+  1: False
+  },
+HVAC_MODE_HEAT: {
+  1: True,
+  4: "1"
+  },
+HVAC_MODE_AUTO: {
+  1: True,
+  4: "0"
+  }
+}
+```
+
+In this configuration the available HVAC modes are: off, heat and auto (HVAC_MODE_OFF, HVAC_MODE_HEAT, HVAC_MODE_AUTO).
+
+When DP# 1 is False the device is set to off.
+
+When DP# 1 is True and DP# 4 is "1" the device is on and set to manual heat mode.
+
+When DP# 1 is True and DP# 4 is "0" the device is on and set to auto (scheduled) heat mode.
+
+
+Presets are configured in the same way, but unlike HVAC modes you are allowed to add custom presets.
+
+An example is:
+
+```
+{"Eco On": {
+  5: True
+  },
+"Eco Off": {
+  5: False
+  }
+}
+```
+The Eco On preset is activated when the DP# 5 is set to True.
+
+Vice versa the Eco Off preset is activated when the DP# 5 is set to False.
+
+
+
 ![logo](https://github.com/rospogrigio/localtuya-homeassistant/blob/master/img/logo-small.png)
 
 A Home Assistant custom Integration for local handling of Tuya-based devices.
