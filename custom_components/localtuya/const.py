@@ -50,9 +50,9 @@ CONF_MIN_TEMP_DP = "min_temperature_dp"
 CONF_FAN_MODE_DP = "fan_mode_dp"
 CONF_HVAC_MODE_DP = "hvac_mode_dp"
 CONF_PRECISION = "precision"
-CONF_PRESET_MODE_DP = "preset_mode_dp"
-CONF_HVAC_MODES = "JSON for HVAC Modes"
-CONF_PRESETS = "JSON for Preset Modes"
+CONF_HVAC_MODES = "hvac_modes_json"
+CONF_PRESETS = "preset_modes_json"
+CONF_EURISTIC_ACTION = "euristic_action"
 
 DATA_DISCOVERY = "discovery"
 

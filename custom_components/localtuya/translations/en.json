@@ -77,14 +77,15 @@
                     "fan_speed_high": "Fan High Speed Setting",
                     "current_temperature_dp": "Current Temperature",
                     "target_temperature_dp": "Target Temperature",
-                    "hvac_mode_dp": "HVAC Mode (optional)",
                     "fan_mode_dp": "Fan Mode (optional)",
                     "temperature_step": "Temperature Step (optional)",
                     "max_temperature_dp": "Max Temperature (optional)",
                     "min_temperature_dp": "Min Temperature (optional)",
                     "precision": "Precision (optional, for DPs values)",
                     "temperature_unit": "Temperature Unit (optional)",
-                    "preset_mode_dp": "Preset mode (optional)"
+                    "hvac_modes_json": "HVAC Modes (JSON)",
+                    "preset_modes_json": "Presets (JSON)",
+                    "euristic_action": "Enable euristic action (optional)"
                 }
             }
         }
@@ -139,14 +140,15 @@
                     "fan_speed_high": "Fan High Speed Setting",
                     "current_temperature_dp": "Current Temperature",
                     "target_temperature_dp": "Target Temperature",
-                    "hvac_mode_dp": "HVAC Mode (optional)",
                     "fan_mode_dp": "Fan Mode (optional)",
                     "temperature_step": "Temperature Step (optional)",
                     "max_temperature_dp": "Max Temperature (optional)",
                     "min_temperature_dp": "Min Temperature (optional)",
                     "precision": "Precision (optional, for DPs values)",
                     "temperature_unit": "Temperature Unit (optional)",
-                    "preset_mode_dp": "Preset mode (optional)"
+                    "hvac_modes_json": "HVAC Modes (JSON)",
+                    "preset_modes_json": "Presets (JSON)",
+                    "euristic_action": "Enable euristic action (optional)"
                 }
             },
             "yaml_import": {
