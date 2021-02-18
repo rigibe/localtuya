@@ -273,6 +273,3 @@ class LocaltuyaClimate(LocalTuyaEntity, ClimateEntity):
                 self._hvac_action = action
        
 async_setup_entry = partial(async_setup_entry, DOMAIN, LocaltuyaClimate, flow_schema)
-
-#action: {CURRENT_HVAC_HEAT:{3: "heating"}, CURRENT_HVAC_OFF:{3: "no_heating"}}
-#action: {CURRENT_HVAC_HEAT:{5: 1}, CURRENT_HVAC_OFF:{5: 0}}
