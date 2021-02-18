@@ -48,6 +48,7 @@ from .const import (
     CONF_PRESETS,
     CONF_HVAC_MODES,
     CONF_EURISTIC_ACTION,
+    CONF_HVAC_ACTION,
 )
 
 from . import pytuya
@@ -80,6 +81,7 @@ def flow_schema(dps):
         ),
         vol.Optional(CONF_HVAC_MODES): str,
         vol.Optional(CONF_PRESETS): str,
+        vol.Optional(CONF_HVAC_ACTION): str,
         vol.Optional(CONF_EURISTIC_ACTION, default=False): bool,
     }
 
@@ -105,6 +107,7 @@ class LocaltuyaClimate(LocalTuyaEntity, ClimateEntity):
         self._precision = self._config.get(CONF_PRECISION, DEFAULT_PRECISION)
         self._conf_hvac_modes = eval(self._config[CONF_HVAC_MODES])
         self._conf_presets = eval(self._config[CONF_PRESETS])
+        self._conf_hvac_actions = eval(self._config[CONF_HVAC_ACTION])
         print("Initialized climate [{}]".format(self.name))
 
     @property
@@ -263,5 +266,13 @@ class LocaltuyaClimate(LocalTuyaEntity, ClimateEntity):
         for preset in self._conf_presets:
             if self.dps_all().items() & self._conf_presets[preset].items() == self._conf_presets[preset].items():
                 self._preset_mode = preset
+
+        """Update the current action"""
+        for action in self._conf_hvac_actions:
+            if self.dps_all().items() & self._conf_hvac_actions[action].items() == self._conf_hvac_actions[action].items():
+                self._hvac_action = action
        
 async_setup_entry = partial(async_setup_entry, DOMAIN, LocaltuyaClimate, flow_schema)
+
+#action: {CURRENT_HVAC_HEAT:{3: "heating"}, CURRENT_HVAC_OFF:{3: "no_heating"}}
+#action: {CURRENT_HVAC_HEAT:{5: 1}, CURRENT_HVAC_OFF:{5: 0}}

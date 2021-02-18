@@ -85,7 +85,8 @@
                     "temperature_unit": "Temperature Unit (optional)",
                     "hvac_modes_json": "HVAC Modes (JSON)",
                     "preset_modes_json": "Presets (JSON)",
-                    "euristic_action": "Enable euristic action (optional)"
+                    "euristic_action": "Enable euristic action (optional)",
+                    "current_action_json": "Current action (JSON)"
                 }
             }
         }
@@ -148,7 +149,8 @@
                     "temperature_unit": "Temperature Unit (optional)",
                     "hvac_modes_json": "HVAC Modes (JSON)",
                     "preset_modes_json": "Presets (JSON)",
-                    "euristic_action": "Enable euristic action (optional)"
+                    "euristic_action": "Enable euristic action (optional)",
+                    "current_action_json": "Current action (JSON)"
                 }
             },
             "yaml_import": {

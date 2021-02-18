@@ -53,6 +53,7 @@ CONF_PRECISION = "precision"
 CONF_HVAC_MODES = "hvac_modes_json"
 CONF_PRESETS = "preset_modes_json"
 CONF_EURISTIC_ACTION = "euristic_action"
+CONF_HVAC_ACTION = "current_action_json"
 
 DATA_DISCOVERY = "discovery"
 
