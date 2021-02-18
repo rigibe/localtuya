@@ -79,9 +79,9 @@ def flow_schema(dps):
         vol.Optional(CONF_TEMPERATURE_UNIT): vol.In(
             [TEMPERATURE_CELSIUS, TEMPERATURE_FAHRENHEIT]
         ),
-        vol.Optional(CONF_HVAC_MODES): str,
-        vol.Optional(CONF_PRESETS): str,
-        vol.Optional(CONF_HVAC_ACTION): str,
+        vol.Required(CONF_HVAC_MODES, default="{}"): str,
+        vol.Required(CONF_PRESETS, default="{}"): str,
+        vol.Required(CONF_HVAC_ACTION, default="{}"): str,
         vol.Optional(CONF_EURISTIC_ACTION, default=False): bool,
     }
 
