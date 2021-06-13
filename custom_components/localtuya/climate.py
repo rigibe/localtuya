@@ -25,6 +25,7 @@ from homeassistant.components.climate.const import (
     SUPPORT_TARGET_TEMPERATURE_RANGE,
     CURRENT_HVAC_OFF,
     CURRENT_HVAC_HEAT,
+    CURRENT_HVAC_IDLE,
 )
 from homeassistant.const import (
     ATTR_TEMPERATURE,
